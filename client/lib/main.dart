@@ -1,5 +1,6 @@
 import 'package:chatapp/views/home/main.dart';
 import 'package:chatapp/views/login/main.dart';
+import 'package:chatapp/views/signin/main.dart';
 import 'package:chatapp/views/welcome/main.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class App extends StatelessWidget {
       routes: {
         "/welcome": (context) => const WelcomePage(),
         "/login": (context) => const LoginPage(),
+        "/signin": (context) => const SigninPage(),
         "/": (context) => const HomePage(),
       },
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SigninPage extends StatelessWidget {
+  const SigninPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +28,32 @@ class LoginPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        "Login Page",
+                        "Signin Page",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                         ),
                       ),
                       const SizedBox(height: 32),
+                      const SizedBox(
+                        width: double.infinity,
+                        child: TextField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            hintText: 'Email',
+                            labelText: "Email",
+                            labelStyle: TextStyle(color: Color(0xffffffff)),
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white60),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white60),
+                            ),
+                            focusColor: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
                       const SizedBox(
                         width: double.infinity,
                         child: TextField(
@@ -53,7 +72,7 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 16),
                       const SizedBox(
                         width: double.infinity,
                         child: TextField(
@@ -75,11 +94,11 @@ class LoginPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       GestureDetector(
-                        onTap: () => {Navigator.pushNamed(context, "/signin")},
+                        onTap: () => {Navigator.pushNamed(context, "/login")},
                         child: const Align(
                           alignment: Alignment.centerRight,
                           child: Text(
-                            "you already have account ?",
+                            "you dont have account ?",
                             textAlign: TextAlign.right,
                             style: TextStyle(
                               fontSize: 14,
@@ -104,7 +123,7 @@ class LoginPage extends StatelessWidget {
                             elevation: 0,
                           ),
                           child: const Text(
-                            "Login",
+                            "Sign In",
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
